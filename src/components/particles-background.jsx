@@ -166,9 +166,13 @@ export default function ParticlesBackground({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-8"
+          className="space-y-8 max-w-4xl mx-auto" // Adjusted max-width and center content
         >
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white">{title}</h1>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white">CamBot</h1>
+
+          <p className="text-xl text-white">
+            CamBot is your AI-powered campus assistant, helping you with everything you need on campus, from class schedules to faculty contacts, and much more!
+          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
             <NavLink

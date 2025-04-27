@@ -1,15 +1,15 @@
 import { NavLink } from "react-router-dom";
-import { FaGoogle, FaEye, FaEyeSlash } from 'react-icons/fa'; // Eye icons for password visibility toggle
-import { useState } from 'react'; // To manage password visibility state
+import { FaGoogle, FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useState } from 'react';
 
- function AdminSignup() {
-  const [showPassword, setShowPassword] = useState(false); // State for toggling password visibility
-  const [name, setName] = useState(""); // State to store name
-  const [email, setEmail] = useState(""); // State to store email
-  const [password, setPassword] = useState(""); // State to store password
+function AdminSignup() {
+  const [showPassword, setShowPassword] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword); // Toggle password visibility state
+    setShowPassword(!showPassword);
   };
 
   const handleSubmit = (e) => {
@@ -21,6 +21,7 @@ import { useState } from 'react'; // To manage password visibility state
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-white p-6 md:p-10 text-black">
       <div className="w-full max-w-sm bg-white p-6 rounded-lg shadow-md border border-gray-200 space-y-6">
+        
         {/* Logo/Header */}
         <div className="flex items-center gap-2 justify-center font-semibold text-black">
           <div className="flex h-6 w-6 items-center justify-center rounded-md bg-black text-white text-xs font-bold">
@@ -69,7 +70,7 @@ import { useState } from 'react'; // To manage password visibility state
             <div className="relative">
               <input
                 id="password"
-                type={showPassword ? "text" : "password"} // Toggle between text and password input type
+                type={showPassword ? "text" : "password"}
                 required
                 placeholder="Your password"
                 value={password}
@@ -78,22 +79,13 @@ import { useState } from 'react'; // To manage password visibility state
               />
               <button
                 type="button"
-                onClick={togglePasswordVisibility} // Handle toggle
+                onClick={togglePasswordVisibility}
                 className="absolute cursor-pointer right-3 top-3 text-gray-500"
               >
-                {showPassword ? <FaEyeSlash /> : <FaEye />} {/* Conditional rendering of eye icons */}
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
             </div>
           </div>
-
-          {/* Google Sign-Up Button */}
-          <button
-            type="button"
-            className="flex cursor-pointer items-center justify-center gap-2 w-full border border-gray-300 rounded-md px-4 py-2 text-sm hover:bg-gray-100 transition-colors"
-          >
-            <FaGoogle className="h-5 w-5" />
-            Sign Up with Google
-          </button>
 
           {/* Submit Button */}
           <button
@@ -103,6 +95,22 @@ import { useState } from 'react'; // To manage password visibility state
             Sign Up as Admin
           </button>
         </form>
+
+        {/* Divider */}
+        <div className="flex items-center gap-4">
+          <hr className="flex-grow border-gray-300" />
+          <span className="text-xs text-gray-500">or continue with</span>
+          <hr className="flex-grow border-gray-300" />
+        </div>
+
+        {/* Google Sign-Up Button */}
+        <button
+          type="button"
+          className="flex cursor-pointer items-center justify-center gap-2 w-full border border-gray-300 rounded-md px-4 py-2 text-sm hover:bg-gray-100 transition-colors"
+        >
+          <FaGoogle className="h-5 w-5" />
+          Sign Up with Google
+        </button>
 
         <p className="text-center text-sm text-black">
           Already have an account?{" "}
@@ -120,4 +128,5 @@ import { useState } from 'react'; // To manage password visibility state
     </div>
   );
 }
+
 export default AdminSignup;

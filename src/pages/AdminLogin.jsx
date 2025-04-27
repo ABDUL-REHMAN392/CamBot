@@ -45,25 +45,10 @@ const AdminLogin = () => {
         </div>
 
         {/* Admin Login Form */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4">
           <div className="text-center">
             <h2 className="text-xl font-semibold">Admin Login</h2>
             <p className="text-sm text-gray-600">Login with your admin credentials</p>
-          </div>
-
-          {/* Google Login Button */}
-          <button
-            type="button"
-            className="flex items-center cursor-pointer justify-center gap-2 w-full border border-gray-300 rounded-md px-4 py-2 text-sm hover:bg-gray-100 transition-colors"
-          >
-            <FaGoogle className="h-5 w-5 text-black" />
-            Login with Google
-          </button>
-
-          {/* Divider */}
-          <div className="relative text-center text-sm text-gray-500">
-            <span className="bg-white px-2 relative z-10">or continue with</span>
-            <div className="absolute inset-0 top-1/2 border-t border-gray-200 z-0" />
           </div>
 
           {/* Email/Password Form */}
@@ -114,7 +99,24 @@ const AdminLogin = () => {
             </button>
           </form>
 
-          <p className="text-center text-sm text-black">
+        
+          <div className="mt-1">
+            {/* Divider for "or continue with" */}
+            <div className="relative text-center text-sm text-gray-500 mb-2">
+              <span className="bg-white px-2 relative z-10">or continue with</span>
+              <div className="absolute inset-0 top-1/2 border-t border-gray-200 z-0" />
+            </div>
+            <button
+              type="button"
+              className="flex items-center cursor-pointer justify-center gap-2 w-full border border-gray-300 rounded-md px-4 py-2 text-sm hover:bg-gray-100 transition-colors"
+            >
+              <FaGoogle className="h-5 w-5 text-black" />
+              Login with Google
+            </button>
+          </div>
+
+        
+          <p className="text-center text-sm text-black ">
             Don't have an account?{" "}
             <NavLink to="/admin-signup" className="underline hover:text-gray-700">
               Sign up

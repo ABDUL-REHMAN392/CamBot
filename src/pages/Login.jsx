@@ -4,7 +4,6 @@ import { useState } from 'react';
 import useStore from "..";
 
 export default function LoginPage() {
-
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -28,8 +27,8 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-6 bg-white p-6 md:p-10 text-black">
-      <div className="flex w-full max-w-sm flex-col gap-6 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+    <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-white p-6 md:p-10 text-black">
+      <div className="flex w-full max-w-sm flex-col gap-4 bg-white p-6 rounded-lg shadow-md border border-gray-200">
 
         {/* Logo/Header */}
         <NavLink to="/" className="flex items-center gap-2 self-center font-semibold text-black">
@@ -40,25 +39,10 @@ export default function LoginPage() {
         </NavLink>
 
         {/* Login Form */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4">
           <div className="text-center">
             <h2 className="text-xl font-semibold">Welcome back</h2>
             <p className="text-sm text-gray-600">Login with your email or Google</p>
-          </div>
-
-          {/* Google Login Button */}
-          <button
-            type="button"
-            className="flex items-center cursor-pointer justify-center gap-2 w-full border border-gray-300 rounded-md px-4 py-2 text-sm hover:bg-gray-100 transition-colors"
-          >
-            <FaGoogle className="h-5 w-5" />
-            Login with Google
-          </button>
-
-          {/* Divider */}
-          <div className="relative text-center text-sm text-gray-500">
-            <span className="bg-white px-2 relative z-10">or continue with</span>
-            <div className="absolute inset-0 top-1/2 border-t border-gray-200 z-0" />
           </div>
 
           {/* Email/Password Form */}
@@ -106,6 +90,21 @@ export default function LoginPage() {
               Login
             </button>
           </form>
+
+          {/* Divider for "or continue with" */}
+          <div className="relative text-center text-sm text-gray-500 my-1">
+            <span className="bg-white px-2 relative z-10">or continue with</span>
+            <div className="absolute inset-0 top-1/2 border-t border-gray-200 z-0" />
+          </div>
+
+          {/* Google Login Button */}
+          <button
+            type="button"
+            className="flex items-center cursor-pointer justify-center gap-2 w-full border border-gray-300 rounded-md px-4 py-2 text-sm hover:bg-gray-100 transition-colors"
+          >
+            <FaGoogle className="h-5 w-5" />
+            Login with Google
+          </button>
 
           <p className="text-center text-sm text-black">
             Don&apos;t have an account?{" "}

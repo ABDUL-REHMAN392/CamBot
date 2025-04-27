@@ -4,8 +4,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute';
-import TermsPage from './pages/TermsPage';
-import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+
 import AdminPannel from './pages/AdminPannel';
 import AdminLogin from './pages/AdminLogin';
 import AdminSignup from './pages/AdminSignup';
@@ -15,8 +14,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/privacy" element={<PrivacyPolicyPage />} />
-        <Route path="/terms" element={<TermsPage />} />
+     
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/admin-login" element={<AdminLogin />} /> 

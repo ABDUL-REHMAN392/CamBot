@@ -1,16 +1,16 @@
 import { NavLink } from "react-router-dom";
-import { FaGoogle, FaEye, FaEyeSlash } from 'react-icons/fa'; // Eye icons for password visibility toggle
-import { useState } from 'react'; // To manage password visibility state
+import { FaGoogle, FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useState } from 'react';
 
 export default function SignUpPage() {
-  const [showPassword, setShowPassword] = useState(false); // State for toggling password visibility
-  const [name, setName] = useState(""); // State to store name
-  const [email, setEmail] = useState(""); // State to store email
-  const [password, setPassword] = useState(""); // State to store password
-  const [role, setRole] = useState("student"); // State to store role (student or faculty)
+  const [showPassword, setShowPassword] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [role, setRole] = useState("student");
 
   const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword); // Toggle password visibility state
+    setShowPassword(!showPassword);
   };
 
   const handleSubmit = (e) => {
@@ -22,6 +22,7 @@ export default function SignUpPage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-white p-6 md:p-10 text-black">
       <div className="w-full max-w-sm bg-white p-6 rounded-lg shadow-md border border-gray-200 space-y-6">
+        
         {/* Logo/Header */}
         <NavLink to="/" className="flex items-center gap-2 justify-center font-semibold text-black">
           <div className="flex h-6 w-6 items-center justify-center rounded-md bg-black text-white text-xs font-bold">
@@ -70,7 +71,7 @@ export default function SignUpPage() {
             <div className="relative">
               <input
                 id="password"
-                type={showPassword ? "text" : "password"} // Toggle between text and password input type
+                type={showPassword ? "text" : "password"}
                 required
                 placeholder="Your password"
                 value={password}
@@ -79,36 +80,27 @@ export default function SignUpPage() {
               />
               <button
                 type="button"
-                onClick={togglePasswordVisibility} // Handle toggle
+                onClick={togglePasswordVisibility}
                 className="absolute cursor-pointer right-3 top-3 text-gray-500"
               >
-                {showPassword ? <FaEyeSlash /> : <FaEye />} {/* Conditional rendering of eye icons */}
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
             </div>
           </div>
 
           {/* Role Selection */}
-          <div className="grid gap-2 ">
+          <div className="grid gap-2">
             <label htmlFor="role" className="text-sm font-medium text-black">Role</label>
             <select
               id="role"
               value={role}
               onChange={(e) => setRole(e.target.value)}
-              className="w-full rounded-md border cursor-pointer  border-gray-300 px-3 py-2 text-sm bg-white text-black shadow-sm focus:border-black focus:outline-none focus:ring-1 focus:ring-black"
+              className="w-full rounded-md border cursor-pointer border-gray-300 px-3 py-2 text-sm bg-white text-black shadow-sm focus:border-black focus:outline-none focus:ring-1 focus:ring-black"
             >
               <option value="student">Student</option>
               <option value="faculty">Faculty</option>
             </select>
           </div>
-
-          {/* Google Sign-Up Button */}
-          <button
-            type="button"
-            className="flex items-center cursor-pointer justify-center gap-2 w-full border border-gray-300 rounded-md px-4 py-2 text-sm hover:bg-gray-100 transition-colors"
-          >
-            <FaGoogle className="h-5 w-5" />
-            Sign Up with Google
-          </button>
 
           {/* Submit Button */}
           <button
@@ -118,6 +110,22 @@ export default function SignUpPage() {
             Sign Up
           </button>
         </form>
+
+        {/* Divider */}
+        <div className="flex items-center gap-4">
+          <hr className="flex-grow border-gray-300" />
+          <span className="text-xs text-gray-500">or continue with</span>
+          <hr className="flex-grow border-gray-300" />
+        </div>
+
+        {/* Google Sign-Up Button */}
+        <button
+          type="button"
+          className="flex items-center cursor-pointer justify-center gap-2 w-full border border-gray-300 rounded-md px-4 py-2 text-sm hover:bg-gray-100 transition-colors"
+        >
+          <FaGoogle className="h-5 w-5" />
+          Sign Up with Google
+        </button>
 
         <p className="text-center text-sm text-black">
           Already have an account?{" "}
