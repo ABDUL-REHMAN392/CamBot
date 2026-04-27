@@ -33,8 +33,8 @@
 
 <br/>
 
-> **An AI-powered university campus chatbot that helps students with academic queries,**
-> **campus navigation, hostel info, deadlines, and much more — available 24/7.**
+**An AI-powered university campus chatbot that helps students with academic queries,**
+ **campus navigation, hostel info, deadlines, and much more — available 24/7.**
 
 <br/>
 
@@ -50,7 +50,6 @@
 
 </div>
 
----
 
 ## 📌 Table of Contents
 
@@ -67,7 +66,6 @@
 - [Contributing](#-contributing)
 - [Author](#-author)
 
----
 
 ## ✨ Overview
 
@@ -82,7 +80,6 @@
 | **FAQ Section** | Accordion-style common campus questions |
 | **Features Section** | 4-card grid showcasing bot capabilities |
 
----
 
 ## 🏗️ Project Structure
 
@@ -123,7 +120,6 @@ CamBot/
 └── package.json
 ```
 
----
 
 ## 🚀 Key Features
 
@@ -158,7 +154,6 @@ CamBot/
 - Accordion toggle — one answer visible at a time
 - Smooth expand/collapse with `+` / `−` icons
 
----
 
 ## 🛠️ Tech Stack
 
@@ -173,7 +168,6 @@ CamBot/
 | Axios | 1.x | HTTP client for chat API |
 | React Icons | 5.x | Icon library |
 
----
 
 ## 🗺️ Pages & Routes
 
@@ -187,7 +181,6 @@ CamBot/
 | `/admin-signup` | Admin Signup | Public |
 | `/admin` | Admin Panel | 👑 Admin login required |
 
----
 
 ## 🧠 State Management
 
@@ -212,7 +205,6 @@ All global state is handled by a single **Zustand** store in `src/index.js`.
 | `setQuery(newQuery)` | Updates the chat input field value |
 | `setAdminLoggedIn(status)` | Sets admin authentication state |
 
----
 
 ## 🧩 Components
 
@@ -238,7 +230,6 @@ Accordion component with 5 pre-loaded campus-related questions. Only one answer 
 ### `ProtectedRoute`
 Wraps any route that requires login. If `isAuthenticated` is false, redirects to `/`.
 
----
 
 ## ⚙️ Local Setup
 
@@ -272,7 +263,6 @@ npm run lint       # Run ESLint
 
 The app will be available at `http://localhost:5173`
 
----
 
 ## 👑 Admin Access
 
@@ -283,11 +273,10 @@ The admin panel uses hardcoded credentials for demo purposes:
 | **Email** | `admin@gmail.com` |
 | **Password** | `admin123` |
 
-> ⚠️ These are demo credentials. Replace with a proper backend authentication system before deploying to production.
+⚠️ These are demo credentials. Replace with a proper backend authentication system before deploying to production.
 
 Navigate to `/admin-login` to access the admin panel.
 
----
 
 ## 🗺️ Roadmap
 
@@ -318,7 +307,6 @@ Navigate to `/admin-login` to access the admin panel.
    └─ Push notifications for deadlines & events
 ```
 
----
 
 ## 🤝 Contributing
 
@@ -339,7 +327,6 @@ refactor: Code restructuring
 chore:    Config / build changes
 ```
 
----
 
 ## 👨‍💻 Author
 
@@ -351,7 +338,6 @@ chore:    Config / build changes
 [![GitHub](https://img.shields.io/badge/GitHub-ABDUL--REHMAN392-181717?style=for-the-badge&logo=github)](https://github.com/ABDUL-REHMAN392)
 [![Gmail](https://img.shields.io/badge/Gmail-abdulrehmanrafique01@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:abdulrehmanrafique01@gmail.com)
 
----
 
 *Agar ye project helpful laga, please ⭐ zaroor do!*
 
